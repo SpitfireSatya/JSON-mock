@@ -1,0 +1,239 @@
+.sub-menu-parent { 
+  position: relative; 
+  padding-left: 5px;
+}
+
+.sub-menu { 
+  visibility: hidden; /* hides sub-menu */
+  position: absolute;
+  opacity: 0;
+  top: 100%;
+  left: 0;
+  width: 100%;
+  transform: translateY(500px);
+  z-index: -1;
+  transition: all 0.5s ease-in-out 0s, visibility 0.1s linear 0.5s, z-index 0s linear 0.01s;
+}
+
+.sub-menu-parent .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 50px 5px 5px;
+  border: 1px solid #ccc;
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+
+.sub-menu-parent .anchor:after {
+  position: absolute;
+  content: "";
+  width: 0; 
+  height: 0; 
+  right: 8px;
+  top: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #0000ff;
+
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+
+.sub-menu-parent:hover .sub-menu {
+  visibility: visible; /* shows sub-menu */
+  z-index: 1;
+  opacity: 1;
+  transform: translateY(0em);
+  transition-delay: 0s, 0s, 0.5s; 
+}
+
+.sub-menu-parent:hover .anchor:after {
+  position: absolute;
+  content: "";
+  width: 0; 
+  height: 0; 
+  right: 8px;
+  top: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ff0000;
+
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+
+/* presentational */
+body { 
+  font: 14px sans-serif; 
+}
+
+/*nav .anchor { 
+  color: #E00; display: block;
+   padding: 0.5em 1em; 
+   text-decoration: none; 
+}
+nav .anchor:hover { 
+  color: #F55; 
+}*/
+
+button {
+  width: 100%;
+  padding: 5px;
+  display: block;
+  position: relative;
+}
+
+.sub-menu > li {
+  width: 100%;
+}
+
+ul,
+ul li { 
+  list-style-type: none; 
+  padding: 0;
+  margin: 0; 
+}
+
+ul { 
+  background: #EEE; 
+  text-align: left; 
+}
+ul > li { 
+  display: inline-block;
+  border-left: 
+  solid 1px #aaa; 
+}
+
+ul > li:first-child { 
+  border-left: none; 
+}
+
+.sub-menu {
+  background: #DDD;
+}
+
+label {
+  display: block;
+  padding: 5px;
+  width: 100%;
+}
+
+table {
+  table-layout: fixed;
+}
+
+td {
+  min-width: 80px;
+  border: 1px solid blue;
+  word-break: break-all;
+}
+
+/*.main-nav-bar {
+  display: inline-block;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  float: left;
+}
+
+.dropdown-check-list {
+  display: inline-block;
+}
+.dropdown-check-list .anchor {
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  padding: 5px 50px 5px 10px;
+  border: 1px solid #ccc;
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+
+
+
+.dropdown-check-list .anchor.down-arrow:after {
+  position: absolute;
+  content: "";
+  width: 0; 
+  height: 0; 
+  right: 8px;
+  top: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #0000ff;
+
+  -moz-transform: rotate(-180deg);
+  -ms-transform: rotate(-180deg);
+  -o-transform: rotate(-180deg);
+  -webkit-transform: rotate(-180deg);
+  transform: rotate(-180deg);
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+
+.dropdown-check-list .anchor.up-arrow:after {
+  position: absolute;
+  content: "";
+  width: 0; 
+  height: 0; 
+  right: 8px;
+  top: 10px;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  border-bottom: 10px solid #ff0000;
+
+  -moz-transform: rotate(360deg);
+  -ms-transform: rotate(360deg);
+  -o-transform: rotate(360deg);
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+
+  transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -webkit-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  -ms-transition: all 1s ease;
+}
+
+.dropdown-check-list ul.items {
+  padding: 2px;
+  display: none;
+  margin: 0;
+  border: 1px solid #ccc;
+  border-top: none;
+}
+
+.dropdown-check-list ul.items li {
+  list-style: none;
+}*/

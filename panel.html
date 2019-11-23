@@ -1,0 +1,74 @@
+<!doctype html>
+<html>
+<head> 
+	<link rel="stylesheet" type="text/css" href="panel.css">
+</head>
+  <body>
+    <h3>Json Mock</h3>
+    <div>
+	   <ul>
+	     <li class="sub-menu-parent">
+	       	<span class="anchor">Request Method Menu</span>
+	       	<ul class="sub-menu menu1">
+	         	<li><label><input class="menu1-inner" type="checkbox" value="GET" />GET </label></li>
+            	<li><label><input class="menu1-inner" type="checkbox" value="POST" />POST </label></li>
+            	<li><label><input class="menu1-inner" type="checkbox" value="DELETE" />DELETE </label></li>
+            	<li><label><input class="menu1-inner" type="checkbox" value="PUT" />PUT </label></li>
+	       	</ul>
+	     </li>
+	     <li class="sub-menu-parent">
+	     	<span class="anchor">Data Selection Menu</span>
+	       	<ul class="sub-menu menu2">
+	         	<li><label><input class="menu2-inner" type="checkbox" value="url" />REQUEST URL </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="method" />REQUEST METHOD </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="body" />REQUEST BODY </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="requestHeaders" />REQUEST HEADERS </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="requestCookies" /> REQUEST COOKIES </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="responseHeaders" />RESPONSE HEADERS </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="response" />RESPONSE DATA </label></li>
+            	<li><label><input class="menu2-inner" type="checkbox" value="responseCookies" /> RESPONSE COOKIES </label></li>
+	       </ul>
+	     </li>
+
+	     <li class="sub-menu-parent">
+	     	<button class="update-btn" type="button" id="updateSelection">Update</button>
+	     </li>
+
+	     <li class="sub-menu-parent">
+	     	<button class="update-btn" type="button" id="downloadJson">Download Mock JSON</button>
+	     </li>
+
+	      <li class="sub-menu-parent">
+	     	<label id="selectedItems"></label>
+	     </li>
+	   </ul>
+    	<!-- <ul class="main-nav-bar">
+	    <li class="main-nav-bar"><div id="list1" class="dropdown-check-list" tabindex="100">
+	        <span class="anchor">Select Method</span>
+	        <ul class="items items1">
+	            <li><input type="checkbox" value="GET" />GET </li>
+	            <li><input type="checkbox" value="POST" />POST </li>
+	            <li><input type="checkbox" value="DELETE" />DELETE </li>
+	            <li><input type="checkbox" value="PUT" />PUT </li>
+	        </ul>
+	    </div></li>
+
+	    <li class="main-nav-bar"><div id="list2" class="dropdown-check-list" tabindex="100">
+	        <span class="anchor">Select Content to Save</span>
+	        <ul class="items items2">
+	            <li><input type="checkbox" value="REQUEST URL" />REQUEST URL </li>
+	            <li><input type="checkbox" value="REQUEST METHOD" />REQUEST METHOD </li>
+	            <li><input type="checkbox" value="REQUEST BODY" />REQUEST BODY </li>
+	            <li><input type="checkbox" value="REQUEST HEADERS" />REQUEST HEADERS </li>
+	            <li><input type="checkbox" value="RESPONSE HEADERS" />RESPONSE HEADERS </li>
+	            <li><input type="checkbox" value="RESPONSE DATA" />RESPONSE DATA </li>
+	            <li><input type="checkbox" value="COOKIES" />COOKIES </li>
+	        </ul>
+	    </div></li>
+	    </ul> -->
+    </div>
+
+    <div id="mockDataTable"></div>
+  </body>
+  <script src="panel.js"></script>
+</html>
